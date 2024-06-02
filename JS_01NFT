@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let NFTs = [];
+
+    function mint(name, age, address, PrivateKey, PublicKey, balance) {
+        const wallet = {
+            name: name,
+            age: age,
+            address: address,
+            PrivateKey: PrivateKey,
+            PublicKey: PublicKey,
+            balance: balance
+        };
+        NFTs.push(wallet);
+    }
+
+    function display() {
+        console.log("Your Cryptocurrency Wallets:");
+        for (let i = 0; i < NFTs.length; i++) {
+            const wallet = NFTs[i];
+            console.log("Name:", wallet.name);
+            console.log("Age:", wallet.age);
+            console.log("Address:", wallet.address);
+            console.log("PrivateKey:", wallet.PrivateKey);
+            console.log("PublicKey:", wallet.PublicKey);
+            console.log("Balance:", wallet.balance);
+            console.log("\n\n");
+        }
+    }
+    function totalNFts(){
+        return NFTs.length;
+    }
+
+    mint("AAAAA", 20, "wxhhy", "#010203ab4s", "0h11habc", 20000);
+    mint("BBBBB", 30, "erphy", "#023452ab4s", "b1h22abc", 30000);
+    mint("CCCCC", 40, "bbghj", "#010205ab4s", "23h3babc", 20000);
+    mint("DDDDD", 50, "oiljk", "#010204ab4s", "3q4c4abc", 40000);
+    mint("EEEEE", 60, "phiyu", "#0112s8ab4s", "4w5k5abc", 50000);
+    mint("FFFFF", 70, "xcvbs", "#3p2q72ab4s", "5w6s6abc", 80000);
+    mint("GGGGG", 80, "lkasd", "#001927ab4s", "q67p7abc", 10000);
+
+    display();
+
+    const totNfts = totalNFts();
+    console.log("Total Wallets :"+totNfts);
+
+</script>
+</body>
+</html>
